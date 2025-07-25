@@ -42,6 +42,27 @@ int main() {
         float PiB2;
 
 
+    // dados da carta1 (variáeis)
+    
+    char NomeDoEstado1[30];
+    char NomeDaCidade1[30];
+    char CodigoDaCarta1[30];
+    int Populacao1;
+    int NumeroDePontosTuristicos1;
+    float AreaEmKm1;
+    float PiB1;
+
+    // dados da cart2 (variáveis)
+    
+    char NomeDoEstado2[30];
+    char NomeDaCidade2[30];
+    char CodigoDaCarta2[30];
+    int Populacao2;
+    int NumeroDePontosTuristicos2;
+    float AreaEmKm2;
+    float PiB2;
+
+
     // Entrada  de Dados Da Carta 1
     printf("Escolha o Primeiro Estado: \n");
     scanf("%s", NomeDoEstado1);
@@ -51,7 +72,7 @@ int main() {
     scanf("%s", CodigoDaCarta1);
     printf("Qual a População total?: \n");
     scanf("%d", &Populacao1);
-    printf("Digite Quantos Pontos Turisticos Totais Tem Nessa Cidade: \n");
+    printf("Digite Quantos Pontos Turísticos Totais Tem Nessa Cidade: \n");
     scanf("%d", &NumeroDePontosTuristicos1);
     printf("Qual é a Área Dessa Cidade?: \n");
     scanf("%f", &AreaEmKm1);
@@ -61,13 +82,13 @@ int main() {
     printf("\n");// quebra de linha
 
     //Saída dos dados da carta 1
-    printf("o estado escolhido foi: %s\n", NomeDoEstado1);
+    printf("O Estado Escolhido Foi: %s\n", NomeDoEstado1);
     printf("A Cidade: %s\n", NomeDaCidade1);
     printf("O Código da Carta1 é: %s\n", CodigoDaCarta1);
     printf("E Sua População Total é De: %d Habitantes\n",Populacao1);
-    printf("Tem %d Pontos Turíscos\n",NumeroDePontosTuristicos1);
-    printf("Sua Área em Km² é de: %f\n",AreaEmKm1);
-    printf("Seu PIB é de: %f\n",PiB1);
+    printf("Tem %d Pontos Turísticos\n",NumeroDePontosTuristicos1);
+    printf("Sua Área em Km² é de: %.2f\n",AreaEmKm1);
+    printf("Seu PIB é de: %.2f\n",PiB1);
 
     printf("\n");// quebra de linha
 
@@ -80,7 +101,7 @@ int main() {
     scanf("%s", CodigoDaCarta2);
     printf("Qual a População total?: \n");
     scanf("%d", &Populacao2);
-    printf("Digite Quantos Pontos Turisticos Totais Tem Nessa Cidade: \n");
+    printf("Digite Quantos Pontos Turísticos Totais Tem Nessa Cidade: \n");
     scanf("%d", &NumeroDePontosTuristicos2);
     printf("Qual é a Área Dessa Cidade?: \n");
     scanf("%f", &AreaEmKm2);
@@ -90,13 +111,13 @@ int main() {
     printf("\n");// quebra de linha
 
     // Saída de dados da Carta 2
-    printf("o estado escolhido foi: %s\n", NomeDoEstado2);
+    printf("O Estado Escolhido Foi: %s\n", NomeDoEstado2);
     printf("A Cidade: %s\n", NomeDaCidade2);
-    printf("O Código da Crta1 é: %s\n", CodigoDaCarta2);
-    printf("E Sua População Total é De: %d Habitantes\n",Populacao2);
+    printf("O Código da Carta2 é: %s\n", CodigoDaCarta2);
+    printf("E Sua População Tota2 é De: %d Habitantes\n",Populacao2);
     printf("Tem %d Pontos Turíscos\n",NumeroDePontosTuristicos2);
-    printf("Sua Área em Km² é de: %f\n",AreaEmKm2);
-    printf("Seu PIB é de: %f\n",PiB2);
+    printf("Sua Área em Km² é de: %.2f\n",AreaEmKm2);
+    printf("Seu PIB é de: %.2f\n",PiB2);
 
     return 0;
 }
