@@ -22,25 +22,6 @@ int main() {
 
 
 
-        // dados da carta1 (variáeis)
-        char NomeDoEstado1[30];
-        char NomeDaCidade1[30];
-        char CodigoDaCarta1[30];
-        int Populacao1;
-        int NumeroDePontosTuristicos1;
-        float AreaEmKm1;
-        float PiB1;
-
-
-        // dados da carat2 (variáveis)
-        char NomeDoEstado2[30];
-        char NomeDaCidade2[30];
-        char CodigoDaCarta2[30];
-        int Populacao2;
-        int NumeroDePontosTuristicos2;
-        float AreaEmKm2;
-        float PiB2;
-
 
     // dados da carta1 (variáeis)
     
@@ -52,7 +33,7 @@ int main() {
     float AreaEmKm1;
     float PiB1;
 
-    // dados da cart2 (variáveis)
+    // dados da carta2 (variáveis)
     
     char NomeDoEstado2[30];
     char NomeDaCidade2[30];
