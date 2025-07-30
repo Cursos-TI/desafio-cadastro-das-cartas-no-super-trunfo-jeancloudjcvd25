@@ -1,10 +1,10 @@
 #include <stdio.h>
-
+#include <locale.h>
 // Desafio Super Trunfo - Países
 // Tema 1 - Cadastro das Cartas
 // Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
 // Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
+
 
 
 
@@ -20,10 +20,7 @@ int main() {
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
 
-
-
-
-    // dados da carta1 (variáeis)
+// dados da carta1 (variáeis)
     
     char NomeDoEstado1[30];
     char NomeDaCidade1[30];
@@ -32,6 +29,9 @@ int main() {
     int NumeroDePontosTuristicos1;
     float AreaEmKm1;
     float PiB1;
+    float DensidadePopulacional1;
+    float PIBPercapita1;
+
 
     // dados da carta2 (variáveis)
     
@@ -42,13 +42,14 @@ int main() {
     int NumeroDePontosTuristicos2;
     float AreaEmKm2;
     float PiB2;
-
+    float DensidadePopulacional2;
+    float PIBPercapita2;
 
     // Entrada  de Dados Da Carta 1
     printf("Escolha o Primeiro Estado: \n");
-    scanf("%s", NomeDoEstado1);
+    fgets(NomeDoEstado1,sizeof(NomeDoEstado1), stdin);
     printf("Digite o Nome Da Cidade: \n");
-    scanf("%s", NomeDaCidade1);
+    fgets(NomeDaCidade1,sizeof(NomeDaCidade1), stdin);
     printf("Digite o Código Da Carta: \n");
     scanf("%s", CodigoDaCarta1);
     printf("Qual a População total?: \n");
@@ -60,24 +61,32 @@ int main() {
     printf("Qual é o PIB?: \n");
     scanf("%f", &PiB1);
 
+    //calculos
+    DensidadePopulacional1 = (float) Populacao1 / AreaEmKm1;
+    PIBPercapita1 = (float) PiB1 / Populacao1;
+
+    getchar();// limpa o buffer antes do próximo fgets
+
     printf("\n");// quebra de linha
 
     //Saída dos dados da carta 1
     printf("O Estado Escolhido Foi: %s\n", NomeDoEstado1);
     printf("A Cidade: %s\n", NomeDaCidade1);
     printf("O Código da Carta1 é: %s\n", CodigoDaCarta1);
-    printf("E Sua População Total é De: %d Habitantes\n",Populacao1);
-    printf("Tem %d Pontos Turísticos\n",NumeroDePontosTuristicos1);
-    printf("Sua Área em Km² é de: %.2f\n",AreaEmKm1);
-    printf("Seu PIB é de: %.2f\n",PiB1);
+    printf("E Sua População Total é De: %d Habitantes\n", Populacao1);
+    printf("Tem %d Pontos Turísticos\n", NumeroDePontosTuristicos1);
+    printf("Sua Área é de: %.2f Km²\n", AreaEmKm1);
+    printf("Seu PIB é de: %.2f Bilhões de Reais\n",PiB1);
+    printf("A Densidade Populacional De: %s É DE: %.2f hab/km²\n", NomeDaCidade1, DensidadePopulacional1);
+    printf("E Seu PIB Per Capita é de: %.2f reais\n", PIBPercapita1);
 
     printf("\n");// quebra de linha
 
     // Entrada de Dados da Carta 2
     printf("Escolha O Segundo Estado: \n");
-    scanf("%s", NomeDoEstado2);
+    fgets(NomeDoEstado2,sizeof(NomeDoEstado2), stdin);
     printf("Digite o Nome Da Cidade: \n");
-    scanf("%s", NomeDaCidade2);
+    fgets(NomeDaCidade2, sizeof(NomeDaCidade2), stdin);
     printf("Digite o Código Da Carta: \n");
     scanf("%s", CodigoDaCarta2);
     printf("Qual a População total?: \n");
@@ -88,6 +97,11 @@ int main() {
     scanf("%f", &AreaEmKm2);
     printf("Qual é o PIB?: \n");
     scanf("%f", &PiB2);
+    
+
+    // calculos
+    DensidadePopulacional2 = (float) Populacao2 / AreaEmKm2;
+    PIBPercapita2 = (float) PiB2 / Populacao2;
 
     printf("\n");// quebra de linha
 
@@ -95,10 +109,16 @@ int main() {
     printf("O Estado Escolhido Foi: %s\n", NomeDoEstado2);
     printf("A Cidade: %s\n", NomeDaCidade2);
     printf("O Código da Carta2 é: %s\n", CodigoDaCarta2);
-    printf("E Sua População Tota2 é De: %d Habitantes\n",Populacao2);
-    printf("Tem %d Pontos Turíscos\n",NumeroDePontosTuristicos2);
-    printf("Sua Área em Km² é de: %.2f\n",AreaEmKm2);
-    printf("Seu PIB é de: %.2f\n",PiB2);
+    printf("E Sua População Total2 é De: %d Habitantes\n",Populacao2);
+    printf("Tem %d Pontos Turísticos\n",NumeroDePontosTuristicos2);
+    printf("Sua Área é de: %.2f km²\n",AreaEmKm2);
+    printf("Seu PIB é de: %.2f Bilhões de Reais\n",PiB2);
+    printf("A Densidade Populacional De: %s é de: %.2f hab/km²\n", NomeDaCidade2, DensidadePopulacional2);
+    printf("E Seu PIB Per Capita é de: %.2f reais\n", PIBPercapita2);
+
 
     return 0;
+
+
+   
 }
